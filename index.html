@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <meta charset="utf-8">
-    <title>Flap Of Doom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlapOfDoom</title>
+    <link rel="icon" type="image/png" href="assets/sprites/Middle.png">
     <style>
         body {
             margin: 0;
             padding: 0;
+            background-color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #333;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            position: relative;
+            width: 400px;
+            height: 600px;
         }
         canvas {
-            border: 2px solid white;
+            display: block;
+            margin: 0 auto;
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
 </head>
 <body>
-    <script src="game.js"></script>
+    <div id="game-container"></div>
+    
+    <!-- Phaser Framework -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    
+    <!-- Game Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/playerData.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/bird.js"></script>
+    <script src="js/pipe.js"></script>
+    <script src="js/ground.js"></script>
+    <script src="js/scenes/bootScene.js"></script>
+    <script src="js/scenes/preloadScene.js"></script>
+    <script src="js/scenes/menuScene.js"></script>
+    <script src="js/scenes/gameScene.js"></script>
+    <script src="js/scenes/shopScene.js"></script>
+    <script src="js/scenes/gameOverScene.js"></script>
+    <script src="js/scenes/nameInputScene.js"></script>
+    <script src="js/scenes/pauseScene.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
